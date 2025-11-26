@@ -26,7 +26,8 @@ Dev-режим (Vite): `http://localhost:5173`
 
 Prod-режим (Nginx): `http://localhost`
 
-Бэкенд (API):
+### Бэкенд (API):
+
 В Dev-режиме: `http://localhost:3000`
 
 В Prod-режиме через Nginx: `http://localhost/api` (если настроен прокси)
