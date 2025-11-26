@@ -30,4 +30,4 @@ Prod-режим (Nginx): `http://localhost`
 
 В Dev-режиме: `http://localhost:3000`
 
-В Prod-режиме через Nginx: `http://localhost/api` (если настроен прокси)
+В Prod-режиме через Nginx: `http://localhost/api`
