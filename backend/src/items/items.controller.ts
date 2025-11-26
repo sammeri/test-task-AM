@@ -10,7 +10,8 @@ export class ItemsController {
   @Get()
   async listItems(@Query() query: ListItemsDto) {
     const limit = query.limit ?? 50;
-    return this.itemsService.list(limit, query.sinceId);
+    const offset = query.offset ?? 0;
+    return this.itemsService.list(limit, query.sinceId, offset);
   }
 
   // GET /items/count

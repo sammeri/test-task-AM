@@ -10,14 +10,15 @@ export class ItemsService {
     private readonly itemsRepository: Repository<Item>,
   ) {}
 
-  async list(limit: number, sinceId?: number) {
+  async list(limit: number, sinceId?: number, offset = 0) {
     const qb = this.itemsRepository
       .createQueryBuilder('item')
       .orderBy('item.id', 'ASC')
-      .take(limit);
+      .take(limit)
+      .skip(offset);
 
     if (sinceId) {
-      qb.where('item.id >= :sinceId', { sinceId });
+      qb.andWhere('item.id >= :sinceId', { sinceId });
     }
 
     return qb.getMany();
