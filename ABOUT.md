@@ -51,7 +51,7 @@
 
 - немедленный отклик с первыми результатами
 
-## Backend: NestJS
+## Backend: ![NestJS Icon](https://raw.githubusercontent.com/nimasfl/nestjs-icons/master/file_type_nestjs.svg) NestJS
 
 Backend также разработан и используется в нагрузочных тестах.
 
