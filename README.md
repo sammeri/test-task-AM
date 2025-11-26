@@ -40,10 +40,10 @@ Prod-режим (Nginx): `http://localhost`
 
 | Метод | URL | Описание | Параметры | Пример запроса | Пример ответа |
 |-------|-----|----------|-----------|----------------|---------------|
-| GET | `/items` | Получение элементов с пагинацией | `limit` и `offset` (query) | `curl http://localhost:3000/items?limit=100&offset=50` | `[ { "id": 51, "name": "Item 51", ... }, ... ]` |
-| GET | `/items/count` | Возвращает общее количество элементов в базе | — | `curl http://localhost:3000/items/count` | `{ "count": 50000 }` |
-| GET | `/items/:id` | Получение элемента по `id` | `id` (path) | `curl http://localhost:3000/items/123` | `{ "id": 123, "name": "Item 123", "description": "..." }` |
-| GET | `/items/since/:sinceId` | Получение элемента начиная с `sinceId` | `sinceId` (path) | `curl http://localhost:3000/items/since/120` | `{ "id": 121, "name": "Item 121", "description": "..." }` |
+| GET | `/items` | Получение элементов с пагинацией | `limit` и `offset` (query) | `http://localhost:3000/items?limit=100&offset=50` | `[ { "id": 51, "name": "Item 51", ... }, ... ]` |
+| GET | `/items/count` | Возвращает общее количество элементов в базе | — | `http://localhost:3000/items/count` | `{ "count": 50000 }` |
+| GET | `/items/:id` | Получение элемента по `id` | `id` (path) | ` http://localhost:3000/items/123` | `{ "id": 123, "name": "Item 123", "description": "..." }` |
+| GET | `/items/since/:sinceId` | Получение элемента начиная с `sinceId` | `sinceId` (path) | `http://localhost/api/items?limit=1&sinceId=43138` | `{ "id": 43138, "name": "Item 43138", "created_at": "2025-11-25T06:21:35.804Z" }` |
 
 > ⚠️ Все запросы работают через базовый URL бэкенда, который в dev режиме: `http://localhost:3000`, в prod через Nginx `/api`.
 
